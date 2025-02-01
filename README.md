@@ -69,29 +69,17 @@ Once you have loaded into your VM, go into control panel, then click -> programs
 </p>
 <br />
 
-Now that IIS is enabled, from the installation files, download and install PHP Manager from IIS. Go through the install wizard and complete the install.
+Now that IIS is enabled, from the installation files, download and install PHP Manager (PHPManagerForIIS_V1.1.5.0). Go through the install wizard and complete the install.
 
-Next from the installation files, download and install the Rewrite Module. (rewrite_amd64_en-US.msi)
+Next from the installation files, download and install the Rewrite Module. (rewrite_amd64_en-US) Go through the setup wizard to finish setting up and installing
 
 Then create a folder in the C drive called PHP.
 
-From Installation Files, download PHP 7.3.8 (php-7.3.88-nts-Win32-VC15-x866.zip) and unzip the contents into C:\PHP
+From Installation Files, extract PHP 7.3.8 (php-7.3.88-nts-Win32-VC15-x866.zip) and unzip the contents into C:\PHP
 
-Once you have downloaded and extracted the zip file into the PHP on the C drive, download and install the VC_redist.x86.exe from the installation files. Go through the setup wizard to finish setting up and installing the VC_redist.x86.exe.
+Once you have downloaded and extracted the zip file into the PHP on the C drive, download and install the VC redist (VC_redist.x86) from the installation files. Go through the setup wizard to finish setting up and installing the VC redist.
 
-Download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi) Run the setup wizard: Typical setup  -> launch -> Configuration Wizard (after install) -> Standard Configuration ->
-
-Make the new root password: Password1
-
-</p>
-<br />
-
-![image](https://github.com/user-attachments/assets/d32daaf1-bc83-488b-9b30-7da34def6aa2)
-
-</p>
-<br />
-
-Execute the process on the next page.
+Download and install MySQL 5.5.62 (mysql-5.5.62-win32) Run the setup wizard: Typical setup -> install -> check launch Configuration Wizard (after install) -> Finish -> Next -> Standard Configuration -> Next -> Make the new root password "root" -> Next -> Execute -> Finish
 
 </p>
 <br />
@@ -131,7 +119,7 @@ Register new PHP version.
 </p>
 <br />
 
-Provide a path to the php executable file (php-cgi.exe), Go to C drive -> PHP -> click on php-cgi file.
+Provide a path to the php executable file (php-cgi.exe), Click on 3 dots, Go to C drive -> PHP -> click on php-cgi file -> open -> ok.
 
 </p>
 <br />
@@ -141,7 +129,7 @@ Provide a path to the php executable file (php-cgi.exe), Go to C drive -> PHP ->
 </p>
 <br />
 
-Restart IIS server.
+Click back arrow once then restart IIS server.
 
 </p>
 <br />
@@ -151,11 +139,11 @@ Restart IIS server.
 </p>
 <br />
 
-Install osTicket v.1.15.8, download osTicket from the installation files folder, extract and copy the "upload" folder to c:\inetpub\wwwroot, within c:\inetpub\root, rename "upload" to "osTicket".
+Back in file explorer, extract osTicket-v.1.15.8 in place, in the extracted file of osTicket-v.1.15.8, copy or drag and drop the "upload" folder to c:\inetpub\wwwroot, within c:\inetpub\wwwroot, rename "upload" to "osTicket".
 
-Reload IIS again.
+Restart IIS again.
 
-On IIS go to sites -> Default -> osTicket -> on the right, click "Browse *:80"
+On IIS go to sites -> Default web site -> osTicket -> on the right, click "Browse *:80 (http)"
 
 </p>
 <br />
@@ -165,7 +153,7 @@ On IIS go to sites -> Default -> osTicket -> on the right, click "Browse *:80"
 </p>
 <br />
 
-Some extensions are not enabled on the osTicket browser.
+Should bring you to this page and if you notice some extensions are not enabled on the osTicket browser.
 
 </p>
 <br />
@@ -175,7 +163,7 @@ Some extensions are not enabled on the osTicket browser.
 </p>
 <br />
 
-To enable the extensions: Go back to IIS, sites -> Default -> osTicket, then double click PHP manager, then click "Enable or disable an extension"
+To enable the extensions: Go back to IIS, sites -> Default web site -> osTicket, then double click PHP manager, then click "Enable or disable an extension"
 
 </p>
 <br />
@@ -203,14 +191,14 @@ Enable three extensions:
 </p>
 <br />
 
-Once extensions are enabled in IIS, we need to rename one of the files in our osTicket folder. Go onto file explorer and search for 
+Once extensions are enabled in IIS, you need to rename one of the files in our osTicket folder. Go onto file explorer and search for 
 C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
 
 Rename the file from "ost-sampleconfig.php" to "ost-config.php"
 
 Next, right-click on the file and go to properties. In properties, click security, then advance, and disable the inheritance. Then select remove all inherited permissions from this object.
 
-Now we will add new permissions. 
+Now you will add new permissions. 
 Click add
 
 </p>
@@ -221,7 +209,7 @@ Click add
 </p>
 <br />
 
-select principle
+click "select a principle"
 
 </p>
 <br />
@@ -231,7 +219,7 @@ select principle
 </p>
 <br />
 
-Type "Everyone" in the box
+Type "Everyone" in the box, then click ok.
 
 </p>
 <br />
@@ -241,7 +229,7 @@ Type "Everyone" in the box
 </p>
 <br />
 
-Ensure full control and all the other boxes are checked
+Ensure full control and all the other boxes are checked, click ok.
 
 </p>
 <br />
@@ -261,9 +249,9 @@ Click apply and OK
 </p>
 <br />
 
-When that is done, you will continue to set up osTicket in the browser. Click continue on the osTicket browser page. Fill out the page as required except for the Database Settings at the bottom of the page.
+When that is done, you will continue to set up osTicket in the browser. Click continue on the osTicket browser page. Fill out the page typing in your the information you want until you get to the Database Settings at the bottom of the page.
 
-Download and install HeidiSQL from the Installation files.
+Go back to the installation files in file explorer and download and install HeidiSQL (HeidiSQL_12.3.0.6589_Setup) from the Installation files. Keep hitting next -> install -> ensure launch HeidiSQL box checked -> finish, HeidiSQL should launch then Select skip.
 
 </p>
 <br />
@@ -273,7 +261,7 @@ Download and install HeidiSQL from the Installation files.
 </p>
 <br />
 
-When the program is open, click new in the bottom left.
+Click new in the bottom left.
 
 </p>
 <br />
@@ -283,19 +271,19 @@ When the program is open, click new in the bottom left.
 </p>
 <br />
 
-Make sure to put the username as "root" and the password as "Password1"
+Make sure to put the username as "root" and the password as "root", then click open.
 
 </p>
 <br />
 
-![image](https://github.com/user-attachments/assets/cbb7ef25-2ca9-478a-b6d3-dac7150d6c8a)
+![image](https://github.com/user-attachments/assets/565d0295-f133-4e74-8ea1-f9ec1c664d23)
 
 </p>
 <br />
 
-Once you are connected to the session, you will go back to the browser to finish setting everything up. Under the Database settings in the browser, the username will be root and the password will be Password1
+Now you will create a database within HeidiSQL. In Heidi, right-click on the left side where it says "Unnamed", select "Create new", and then select "Database". Name the new database "osTicket". Click OK. 
 
-Now you will create a database within HeidiSQL. In Heidi, right-click on the left side where it says "Unnamed", select "Create new", and then select "Database". Name the new database "osTicket". When that is done go back to the osTicket browser and under MySQL Database type in "osTicket".
+Now go back to the osTicket browser and for MySQL Database type in "osTicket". For username and password type in "root" for both. Then click Install now.
 
 </p>
 <br />
@@ -309,7 +297,10 @@ Now you will create a database within HeidiSQL. In Heidi, right-click on the lef
 <h2>The last step is optional</h2>
 
 If you wish to do some cleanup, you would delete the setup folder in your system
-Delete: C:\inetpub\wwwroot\osTicket\setup   **ONLY** delete the setup folder and nothing else. osTicket will still work if you do not delete this folder.
+Delete: C:\inetpub\wwwroot\osTicket\setup   **ONLY** delete the setup folder and nothing else. 
+
+If you ar4e not comfortable performing these steps, DO NOT do them.
+osTicket will still work if you do not delete this folder or change permissions back.
 
 Then you will set the permissions back to "Read" only in the ost-config.php file.
 
@@ -325,6 +316,16 @@ Then you will set the permissions back to "Read" only in the ost-config.php file
 
 </p>
 <br />
+
+In browser type for login page type in
+
+localhost/osTicket/scp/login.php    
+
+or
+
+In the browser for End Users type in 
+
+localhost/osTicket/
 
 When you see this screen you have successfully installed and set up osTicket.
 
