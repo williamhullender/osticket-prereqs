@@ -54,6 +54,70 @@ Once you have loaded into your VM, go into control panel, then click -> programs
 
 ![image](https://github.com/user-attachments/assets/e5f9ad3d-045b-4cdd-9e0d-671902b17d95)
 
+Now that IIS is enabled, from the installation files, download and install PHP Manager from IIS. Go through the install wizard and complete the install.
+
+Next from the installation files, download and install the Rewrite Module. (rewrite_amd64_en-US.msi)
+
+Then create a folder in the C drive called PHP.
+
+From Installation Files, download PHP 7.3.8 (php-7.3.88-nts-Win32-VC15-x866.zip) and unzip the contents into C:\PHP
+
+Once you have downloaded and extracted the zip file into the PHP on the C drive, download and install the VC_redist.x86.exe from the installation files. Go through the setup wizard to finish setting up and installing the VC_redist.x86.exe.
+
+Download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi) Run the setup wizard: Typical setup  -> launch -> Configuration Wizard (after install) -> Standard Configuration ->
+
+Make the new root password: Password1
+
+![image](https://github.com/user-attachments/assets/d32daaf1-bc83-488b-9b30-7da34def6aa2)
+
+Execute the process on the next page.
+
+![image](https://github.com/user-attachments/assets/2b199fb7-1471-4a16-bb87-40d3c5d9a46c)
+
+Now that you have the files downloaded and installed, search for IIS in the Windows search bar. Open IIS as administrator.
+
+![image](https://github.com/user-attachments/assets/3ef4011c-4d01-4599-b1a8-963b53979887)
+
+Now register PHP from within IIS. Click on PHP Manager.
+
+![image](https://github.com/user-attachments/assets/d6f0c01d-7d45-4553-8cad-68583e5f6848)
+
+Register new PHP version.
+
+![image](https://github.com/user-attachments/assets/5c20aa55-99e5-4564-a3f3-891290a620d3)
+
+Provide a path to the php executable file (php-cgi.exe), Go to C drive -> PHP -> click on php-cgi file.
+
+![image](https://github.com/user-attachments/assets/a63472ce-708d-4617-aa8a-b753f256ef1f)
+
+Restart IIS server.
+
+![image](https://github.com/user-attachments/assets/6117a1aa-79ae-4643-a844-74f1e43fdece)
+
+Install osTicket v.1.15.8, download osTicket from the installation files folder, extract and copy the "upload" folder to c:\inetpub\wwwroot, within c:\inetpub\root, rename "upload" to "osTicket".
+
+Reload IIS again.
+
+On IIS go to sites -> Default -> osTicket -> on the right, click "Browse *:80"
+
+![image](https://github.com/user-attachments/assets/47ac6587-a61a-41f3-a015-1ca01444f8dd)
+
+Some extensions are not enabled on the osTicket browser.
+
+![image](https://github.com/user-attachments/assets/19a80a56-40b5-4ddb-8b8c-bccb7d4e49fd)
+
+To enable the extensions: Go back to IIS, sites -> Default -> osTicket, then double click PHP manager, then click "Enable or disable an extension"
+
+![image](https://github.com/user-attachments/assets/84576135-4ae1-4be8-8271-847705700c9e)
+
+
+
+
+
+
+
+
+
 
 
 </p>
